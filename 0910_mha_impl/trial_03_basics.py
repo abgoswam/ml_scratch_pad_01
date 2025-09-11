@@ -41,7 +41,61 @@ def main():
     context_vec_2 = torch.zeros(query.shape)
     for i,x_i in enumerate(inputs):
         context_vec_2 += attn_weights_2[i]*x_i
+    print(context_vec_2)
 
+    attn_scores = torch.empty(6, 6)
+    for i, x_i in enumerate(inputs):
+        for j, x_j in enumerate(inputs):
+            attn_scores[i, j] = torch.dot(x_i, x_j)
+    print(attn_scores)
+
+    attn_scores = inputs @ inputs.T
+    print(attn_scores)
+
+    attn_weights = torch.softmax(attn_scores, dim=-1)
+    print(attn_weights)
+
+    row_2_sum = sum([0.1385, 0.2379, 0.2333, 0.1240, 0.1082, 0.1581])
+    print("Row 2 sum:", row_2_sum)
+
+    print("All row sums:", attn_weights.sum(dim=-1))
+
+    all_context_vecs = attn_weights @ inputs
+    print(all_context_vecs)
+    print("Previous 2nd context vector:", context_vec_2)
+
+    x_2 = inputs[1] # second input element
+    d_in = inputs.shape[1] # the input embedding size, d=3
+    d_out = 2 # the output embedding size, d=2
+
+    torch.manual_seed(123)
+
+    W_query = torch.nn.Parameter(torch.rand(d_in, d_out), requires_grad=False)
+    W_key   = torch.nn.Parameter(torch.rand(d_in, d_out), requires_grad=False)
+    W_value = torch.nn.Parameter(torch.rand(d_in, d_out), requires_grad=False)
+
+    query_2 = x_2 @ W_query # _2 because it's with respect to the 2nd input element
+    key_2 = x_2 @ W_key 
+    value_2 = x_2 @ W_value
+    print(query_2)
+
+    keys = inputs @ W_key 
+    values = inputs @ W_value
+    print("keys.shape:", keys.shape)
+    print("values.shape:", values.shape)
+
+    keys_2 = keys[1] # Python starts index at 0
+    attn_score_22 = query_2.dot(keys_2)
+    print(attn_score_22)
+
+    attn_scores_2 = query_2 @ keys.T # All attention scores for given query
+    print(attn_scores_2)
+
+    d_k = keys.shape[1]
+    attn_weights_2 = torch.softmax(attn_scores_2 / d_k**0.5, dim=-1)
+    print(attn_weights_2)
+
+    context_vec_2 = attn_weights_2 @ values
     print(context_vec_2)
 
     print("done")
