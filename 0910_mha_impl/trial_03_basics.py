@@ -16,6 +16,7 @@ def main():
     print(inputs)
 
     query = inputs[1]  # 2nd input token is the query
+    print(f"query:{query}")
 
     attn_scores_2 = torch.empty(inputs.shape[0])
     for i, x_i in enumerate(inputs):
@@ -34,6 +35,14 @@ def main():
     attn_weights_2 = torch.softmax(attn_scores_2, dim=0)
     print("Attention weights:", attn_weights_2)
     print("Sum:", attn_weights_2.sum())
+
+    query = inputs[1] # 2nd input token is the query
+
+    context_vec_2 = torch.zeros(query.shape)
+    for i,x_i in enumerate(inputs):
+        context_vec_2 += attn_weights_2[i]*x_i
+
+    print(context_vec_2)
 
     print("done")
 
