@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-09-14 | MHA
 | 2025-09-13 | Causal Attention, Dropout
 | 2025-09-12 | Simple Attention, MFU    
 | 2025-09-11 | MHA trials, MFU          
