@@ -5,7 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
-| 2025-09-14 | MHA
+| 2025-09-14 | MHA, torch.squeeze / unsqueeze
 | 2025-09-13 | Causal Attention, Dropout
 | 2025-09-12 | Simple Attention, MFU    
 | 2025-09-11 | MHA trials, MFU          
@@ -14,11 +14,12 @@ scratch projects for fun
 
 ## topics
 
-- mha -1
 - mha - 2
 - KV
-- RL - vanilla PG
-- RL PPO
 - vLLM / MAX
 - einsum
 - DDP
+
+- mha -1
+- RL - vanilla PG
+- RL PPO
