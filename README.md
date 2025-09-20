@@ -5,6 +5,8 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-09-20 | KV cache understanding
+| 2025-09-17 | added files for KV, flops
 | 2025-09-14 | MHA, torch.squeeze / unsqueeze
 | 2025-09-13 | Causal Attention, Dropout
 | 2025-09-12 | Simple Attention, MFU    
@@ -15,11 +17,10 @@ scratch projects for fun
 ## topics
 
 - mha - 2
-- KV
 - vLLM / MAX
 - einsum
 - DDP
-
-- mha -1
-- RL - vanilla PG
-- RL PPO
+- buffer
+- random
+- data loader
+- beam search
