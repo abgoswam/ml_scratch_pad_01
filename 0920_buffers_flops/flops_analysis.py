@@ -1,30 +1,15 @@
-# %% [markdown]
-# <table style="width:100%">
-# <tr>
-# <td style="vertical-align:middle; text-align:left;">
-# <font size="2">
-# Supplementary code for the <a href="http://mng.bz/orYv">Build a Large Language Model From Scratch</a> book by <a href="https://sebastianraschka.com">Sebastian Raschka</a><br>
-# <br>Code repository: <a href="https://github.com/rasbt/LLMs-from-scratch">https://github.com/rasbt/LLMs-from-scratch</a>
-# </font>
-# </td>
-# <td style="vertical-align:middle; text-align:left;">
-# <a href="http://mng.bz/orYv"><img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/cover-small.webp" width="100px"></a>
-# </td>
-# </tr>
-# </table>
-
-# %% [markdown]
-# # FLOPS Analysis
-
-# %% [markdown]
-# - FLOPs (Floating Point Operations Per Second) measure the computational complexity of neural network models by counting the number of floating-point operations executed
-# - High FLOPs indicate more intensive computation and energy consumption
-
-# %%
-# pip install -r requirements-extra.txt
-
-# %%
 from importlib.metadata import version
+
+import sys
+import pprint
+
+print("Python sys.path:")
+pprint.pprint(sys.path)
+
+# Or for a simpler format:
+print("\nPython sys.path (simple format):")
+for i, path in enumerate(sys.path):
+    print(f"{i}: {path}")
 
 pkgs = [
     "thop",
@@ -33,20 +18,12 @@ pkgs = [
 for p in pkgs:
     print(f"{p} version: {version(p)}")
 
-# %% [markdown]
-# &nbsp;
-# # Simple benchmark with fixed batch size
-
-# %% [markdown]
-# - forward pass only
-
-# %%
 import torch
 from thop import profile
 
 # For installation instructions, see:
 # https://github.com/rasbt/LLMs-from-scratch/tree/main/pkg
-from llms_from_scratch.ch04 import GPTModel
+from ch04 import GPTModel
 
 
 BASE_CONFIG = {
@@ -82,14 +59,6 @@ for size in model_configs:
     del model
     torch.cuda.empty_cache()
 
-# %% [markdown]
-# &nbsp;
-# # Simple benchmark with automatic batch size finding
-
-# %% [markdown]
-# - forward pass only
-
-# %%
 for size in model_configs:
     print(f"\nProcessing {size}")
     config = BASE_CONFIG.copy()
@@ -138,32 +107,6 @@ for size in model_configs:
             else:
                 raise e
 
-# %% [markdown]
-# &nbsp;
-# # Benchmark with automatic batch size finding and Model FLOP Utilization (MFU)
-
-# %% [markdown]
-# - Model FLOPs Utilization (MFU) explanation from the [PaLM paper](https://arxiv.org/abs/2204.02311)
-# 
-# > We propose a new metric for efficiency that is implementation-independent and permits a cleaner comparison of system efficiency, called model FLOPs utilization (MFU). This is the ratio of the observed throughput (tokens-per-second) relative to the theoretical maximum throughput of a system operating at peak FLOPs. Crucially, the “theoretical maximum” throughput only accounts for the required operations to compute the forward+backward passes, and not rematerialization.
-# 
-# 
-# $$\text{MFU} = \frac{\text{Observed Tokens per Second}}{\text{Theoretical Max Tokens per Second}}$$
-# 
-# where
-# 
-# $$\text{Theoretical Max Tokens per Second} = \frac{\text{Max FLOPs per Second}}{\text{Total FLOPs per Token}}$$
-# 
-# and
-# 
-# $$\text{Tokens per Second} = \frac{\text{Batch Size} \times \text{Sequence Length}}{\text{Total Time}}$$
-
-# %% [markdown]
-# - forward and backward pass
-
-# %%
-# Theoretical max flops per second provided by the GPU manufacturer
-
 flops_per_second = {
     # https://www.techpowerup.com/gpu-specs/h100-pcie-80-gb.c3899
     "H100": {
@@ -209,8 +152,6 @@ flops_per_second = {
     }
 }
 
-
-# %%
 import time
 
 def get_gpu_model(flops_per_second_dict):
@@ -320,9 +261,3 @@ if gpu_model != "Unknown":
 
 else:
     print("Unknown GPU model. Please update the flops_per_second dictionary with your GPU information.")
-
-# %% [markdown]
-# - a value of 1.0 is best (equal to 100%)
-# - Note that the batch sizes are smaller than previously because we also carry out the backward pass here, which is more memory-intensive
-
-
