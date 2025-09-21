@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-09-21 | GRPO
 | 2025-09-20 | KV cache understanding
 | 2025-09-17 | added files for KV, flops
 | 2025-09-14 | MHA, torch.squeeze / unsqueeze
