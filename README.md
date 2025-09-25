@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-09-24 | einsum basics
 | 2025-09-21 | GRPO
 | 2025-09-20 | KV cache understanding
 | 2025-09-17 | added files for KV, flops
@@ -19,7 +20,6 @@ scratch projects for fun
 
 - mha - 2
 - vLLM / MAX
-- einsum
 - DDP
 - buffer
 - random
