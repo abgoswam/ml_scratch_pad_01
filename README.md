@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-09-26 | vision CNN
 | 2025-09-25 | pytorch buffers
 | 2025-09-24 | einsum basics
 | 2025-09-21 | GRPO
