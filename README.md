@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-02 | kv cache deepdive
 | 2025-10-01 | mha / kv cache demo
 | 2025-09-26 | vision CNN
 | 2025-09-25 | pytorch buffers
