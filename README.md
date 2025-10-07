@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-07 | day 1 drills
 | 2025-10-06 | beam search
 | 2025-10-03 | dropout
 | 2025-10-02 | kv cache deepdive
