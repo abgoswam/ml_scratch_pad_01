@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-06 | beam search
 | 2025-10-03 | dropout
 | 2025-10-02 | kv cache deepdive
 | 2025-10-01 | mha / kv cache demo
@@ -29,4 +30,3 @@ scratch projects for fun
 - buffer
 - random
 - data loader
-- beam search
