@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-10 | magnitude, dot product, cosine sim
 | 2025-10-09 | permute, transpose, broadcast
 | 2025-10-08 | vllm trials
 | 2025-10-07 | day 1 drills
