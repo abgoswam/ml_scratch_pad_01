@@ -340,12 +340,12 @@ def main():
         torch.cuda.synchronize()
     start = time.time()
 
-    # token_ids = generate_text_simple(
-    #     model=model,
-    #     idx=encoded_tensor,
-    #     max_new_tokens=200,
-    #     context_size=GPT_CONFIG_124M["context_length"]
-    # )
+    token_ids = generate_text_simple(
+        model=model,
+        idx=encoded_tensor,
+        max_new_tokens=200,
+        context_size=GPT_CONFIG_124M["context_length"]
+    )
 
     ####################################################
     # NEW
