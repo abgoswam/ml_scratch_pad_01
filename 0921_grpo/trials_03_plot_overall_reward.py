@@ -140,8 +140,7 @@ def plot_combined_rewards(df):
     y_end = np.ceil(y_max * 2) / 2 + 0.5
     ax.set_yticks(np.arange(y_start, y_end + 0.1, 0.5))
     
-    # Place legend inside the figure for better readability
-    ax.legend(loc='upper right', fontsize=10, framealpha=0.9, fancybox=True, shadow=True)
+    ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
     ax.grid(True, alpha=0.3)
     
     plt.tight_layout()
