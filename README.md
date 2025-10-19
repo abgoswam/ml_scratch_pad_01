@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-19 | kmeans
 | 2025-10-18 | vizuara. self attn with trainable.
 | 2025-10-15 | back of env calc
 | 2025-10-10 | magnitude, dot product, cosine sim
