@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-21 | min-max
 | 2025-10-20 | kvcache practice
 | 2025-10-19 | kmeans
 | 2025-10-18 | vizuara. self attn with trainable.
