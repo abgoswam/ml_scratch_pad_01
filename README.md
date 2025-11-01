@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-10-31 | vision transformer from scratch
 | 2025-10-24 | architect. generate
 | 2025-10-23 | cs231n. loss
 | 2025-10-22 | mako kernels
