@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-11-06 | gradient norm
 | 2025-11-03 | all_gather op
 | 2025-10-31 | vision transformer from scratch
 | 2025-10-24 | architect. generate
