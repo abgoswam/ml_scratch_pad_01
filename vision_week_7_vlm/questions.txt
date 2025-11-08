@@ -2,3 +2,14 @@
 1. token to embedding . how ?
 2. positional embedding . how ?
 
+BERT: 
+Visual BERT
+ViLBERT
+CLIP
+
+3. bias term -- why is it same as number of output dimension
+4. layer norm -- whats the number of parameters ?
+
+https://colab.research.google.com/drive/1LgUF3Fi-ZdcdXSKK3tdtJMBOab0XJxNN?usp=sharing#scrollTo=zG_30F_aOP9d
+
+https://colab.research.google.com/drive/1kvmdfGmeu5i_NYvhjE0sugSrjf82bhOl?usp=sharing
