@@ -1,0 +1,4 @@
+
+1. token to embedding . how ?
+2. positional embedding . how ?
+
