@@ -1,0 +1,29 @@
+> What is your company going to make? Please describe your product and what it does or will do. 
+
+OpenForge makes agents reliable. Today, most AI agents break because they rely on static prompts and black-box LLMs. OpenForge is a training layer that plugs into any agent, observes how it behaves, assigns rewards based on business goals, and fine-tunes the underlying model so the agent improves over time.
+
+Developers add a few lines of code to wrap their existing agent. OpenForge then runs agent rollouts, collects trajectories, attributes rewards, and applies RL fine-tuning to increase success rates. It also gives visibility into why agents fail (reasoning traces, environment actions, reward curves).
+
+The result is agents that get better with deployment—not worse. Enterprises can safely use agents for planning, browsing, and coding workflows without manual guardrails or prompt band-aids.
+
+> How far along are you? 
+
+We have the full training loop working for two agent types (coding and travel planning). The system already observes runs, assigns rewards, and fine-tunes the underlying model to improve task success rates.
+
+We are now generalizing the framework to support broader workflows and making the API simpler to integrate. We are also building rollout infrastructure to scale training across many concurrent agent tasks. We expect to onboard design partners in January and release a public v0.1 in Q1 2026.
+
+> When will you have a version people can use? 
+
+We will onboard our first design partners in January. A public v0.1 release will follow in Q1 2026. The core system is working today; our current focus is making integration simple and making rollout/training stable at scale.
+
+> Why did you pick this idea to work on? Do you have domain expertise in this area? How do you know people need what you're making?
+
+We’ve seen the problem firsthand. In our previous work with coding agents, we built RL pipelines that observed agent behavior, assigned rewards, and fine-tuned the LLM to significantly improve task success rates. Many teams we’ve talked to in finance, legal, dev tooling, and professional services are trying to deploy internal agents, but the agents fail unpredictably and require constant prompt patching.
+
+These teams want agents that learn from experience and align with business KPIs — but they don’t have the RL infrastructure or expertise to build it. We already solved this once in the coding agent domain. OpenForge is the generalized product version.
+
+> How do or will you make money? How much could you make? 
+
+We will sell OpenForge as a self-hosted enterprise platform (deployed in the customer’s VPC). Pricing will be an annual platform license based on number of agents and training workloads, with optional support and rollout orchestration.
+
+The opportunity is large: every enterprise building internal agents needs reliability and continual improvement. If we become the default training and evaluation layer for agent systems (similar to how Ray became the default layer for distributed ML), this is a multi-billion-dollar market.
