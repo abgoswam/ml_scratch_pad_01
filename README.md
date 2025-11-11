@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-11-11 | generate text unit tests
 | 2025-11-10 | vlm. clip loss.
 | 2025-11-06 | gradient norm
 | 2025-11-03 | all_gather op
