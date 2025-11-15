@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-11-15 | LayerNorm
 | 2025-11-14 | DeiT (week 8)
 | 2025-11-12 | sdpa, mha
 | 2025-11-11 | generate text unit tests
