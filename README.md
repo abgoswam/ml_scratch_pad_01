@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-11-21 | train loop 
 | 2025-11-17 | KL_div 
 | 2025-11-16 | LoRA, gather
 | 2025-11-15 | LayerNorm
