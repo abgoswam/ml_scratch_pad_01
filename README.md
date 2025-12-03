@@ -5,6 +5,8 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-12-03 | ensemble 
+| 2025-12-02 | ring attention 
 | 2025-11-23 | initialization, symmetry 
 | 2025-11-21 | train loop 
 | 2025-11-17 | KL_div 
