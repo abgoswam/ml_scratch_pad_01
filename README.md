@@ -5,8 +5,9 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
-| 2025-12-04 | torch, unsqueeze
-| 2025-12-04 | torch, gradient flow 
+| 2025-12-19 | sequential
+| 2025-12-04 | unsqueeze
+| 2025-12-04 | gradient flow 
 | 2025-12-03 | ensemble 
 | 2025-12-02 | ring attention 
 | 2025-11-23 | initialization, symmetry 
