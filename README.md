@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-12-24 | revisit snowflake
 | 2025-12-23 | pytorch course01. lab02
 | 2025-12-19 | sequential
 | 2025-12-04 | unsqueeze
