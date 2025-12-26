@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2025-12-25 | revisit SFT (mako)
 | 2025-12-25 | revisit parameter estimation
 | 2025-12-24 | revisit snowflake
 | 2025-12-23 | pytorch course01. lab02
