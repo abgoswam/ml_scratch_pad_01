@@ -5,7 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
-| 2026-01-04 | pytorch course01. assignment
+| 2026-01-05 | pytorch course01. assignment
 | 2026-01-04 | pytorch course01. ReLU and z-score normalization
 | 2025-12-25 | revisit SFT (mako)
 | 2025-12-25 | revisit parameter estimation
