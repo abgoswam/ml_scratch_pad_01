@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-01-12 | scaling, min-max normalization, z-score
 | 2026-01-11 | c1m2 pytorch
 | 2026-01-06 | agent vizuara lec 2
 | 2026-01-05 | pytorch course01. ML-pipeline
