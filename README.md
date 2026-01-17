@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-01-17 | fsdp, HF
 | 2026-01-16 | phi ramp up plan
 | 2026-01-12 | scaling, min-max normalization, z-score
 | 2026-01-11 | c1m2 pytorch
