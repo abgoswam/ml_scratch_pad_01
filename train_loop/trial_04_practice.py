@@ -1,42 +1,13 @@
 """
-We are building a lightweight code completion model (similar to a tiny GitHub Copilot). We have tokenized source code data where integers represent specific syntax tokens (e.g., `def`, `return`, `int`, etc.).
+We are building a lightweight model (e.g. Amazon Rufus).
 
-Your task is to implement the training pipeline for a 'Next Token Prediction' task. We have provided a synthetic dataset class. You need to implement a simple model and the training loop.
+Your task is to implement the training pipeline for a 'Next Token Prediction' task. We have provided a synthetic dataset class. 
+You need to implement a simple model and the training loop.
 
 **Specific Requirements:**
 
 1.  **Data Handling:** You must treat this as a Causal Language Modeling (CLM) task. The model predicts the next token.
-
 2.  **The Model and training Loop:** Implement the model. the forward pass, loss calculation, backward pass, and parameter update.
-
-"""
-
-"""
-# Helpful Signatures
-
-1. DataLoader 
-
-DataLoader(dataset, batch_size=1, shuffle=False, sampler=None,
-           batch_sampler=None, num_workers=0, collate_fn=None,
-           pin_memory=False, drop_last=False, timeout=0,
-           worker_init_fn=None, *, prefetch_factor=2,
-           persistent_workers=False)
-
-2. Embedding 
-
-torch.nn.Embedding(num_embeddings, embedding_dim, padding_idx=None, max_norm=None, norm_type=2.0, scale_grad_by_freq=False, sparse=False, _weight=None, _freeze=False, device=None, dtype=None)
-
-3. Linear
-
-torch.nn.Linear(in_features, out_features, bias=True, device=None, dtype=None)
-
-4. ReLU
-
-torch.nn.ReLU(inplace=False)
-
-4. CrossEntropyLoss
-
-loss = F.cross_entropy(logits, target) of shape (N, C) and (N,) respectively.
 
 """
 
@@ -46,7 +17,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.utils.data import DataLoader, Dataset
 
-class SyntheticCodeDataset(Dataset):
+class SyntheticDataset(Dataset):
     def __init__(self, num_samples=1000, seq_len=10, vocab_size=100):
         # Random integers representing code tokens
         torch.manual_seed(42)
@@ -60,12 +31,12 @@ class SyntheticCodeDataset(Dataset):
 
 
 vocab_size = 100
-dataset = SyntheticCodeDataset(vocab_size=vocab_size)
+dataset = SyntheticDataset(vocab_size=vocab_size)
 
 # TOD: Create dataloader with batch size of 32
 data_loader = pass
 
-class TinyCodeModel(nn.Module):
+class TinyModel(nn.Module):
     """
     A simple feed-forward network for token prediction.
     Architecture: Embedding -> Linear -> ReLU -> Linear
@@ -80,7 +51,7 @@ class TinyCodeModel(nn.Module):
         # TODO: Implement the forward pass
         pass
 
-def train_code_completion_model(model, dataloader, epochs=3, learning_rate=0.001):
+def train_model(model, dataloader, epochs=3, learning_rate=0.001):
     """
     Implement the training loop for Next Token Prediction.
     """
@@ -107,5 +78,5 @@ def train_code_completion_model(model, dataloader, epochs=3, learning_rate=0.001
         print(f"Epoch {epoch+1}/{epochs}, Loss: {avg_epoch_loss:.4f}")
 
 
-my_model = TinyCodeModel(vocab_size)
-train_code_completion_model(my_model, data_loader)
+my_model = TinyModel(vocab_size)
+train_model(my_model, data_loader)

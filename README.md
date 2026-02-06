@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-02-05 | RoPE trial
 | 2026-01-30 | SFT practice question
 | 2026-01-17 | fsdp, HF
 | 2026-01-16 | phi ramp up plan
