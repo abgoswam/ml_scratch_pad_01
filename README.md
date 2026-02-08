@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-02-08 | qwen3 memory
 | 2026-02-06 | vLLM and HF layer weights
 | 2026-02-05 | RoPE trial
 | 2026-01-30 | SFT practice question
