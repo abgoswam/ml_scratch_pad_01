@@ -1,14 +1,12 @@
 """
 We are building a lightweight model (e.g. Amazon Rufus).
 
-Your task is to implement the training pipeline for a 'Next Token Prediction' task. We have provided a synthetic dataset class. 
+For simplicity, 
+- we use a feed-forward model only.
+- the model performs next token prediction, conditioned on only the current token.
+
 You need to implement a simple model and the training loop.
-
-**Specific Requirements:**
-
-1.  **Data Handling:** You must treat this as a Causal Language Modeling (CLM) task. The model predicts the next token.
-2.  **The Model and training Loop:** Implement the model. the forward pass, loss calculation, backward pass, and parameter update.
-
+Fill in the TODO sections.
 """
 
 import torch
@@ -33,8 +31,8 @@ class SyntheticDataset(Dataset):
 vocab_size = 100
 dataset = SyntheticDataset(vocab_size=vocab_size)
 
-# TOD: Create dataloader with batch size of 32
-data_loader = pass
+# TODO: Create dataloader with batch size of 32
+data_loader = None
 
 class TinyModel(nn.Module):
     """
@@ -44,7 +42,7 @@ class TinyModel(nn.Module):
     def __init__(self, vocab_size, embed_dim=32, hidden_dim=64):
         super().__init__()
 
-        # TOD:: Define the layers.
+        # TODO: Define the layers.
         pass
 
     def forward(self, x):

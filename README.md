@@ -8,6 +8,7 @@ scratch projects for fun
 | 2026-02-23 | wandb. common curves
 | 2026-02-19 | trials with bf16 precision, mixed precision training
 | 2026-02-13 | grad norm
+| 2026-02-09 | CLM vs bigram
 | 2026-02-08 | qwen3 memory
 | 2026-02-06 | vLLM and HF layer weights
 | 2026-02-05 | RoPE trial
