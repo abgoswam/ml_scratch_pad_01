@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-02-23 | wandb. common curves
 | 2026-02-19 | trials with bf16 precision, mixed precision training
 | 2026-02-13 | grad norm
 | 2026-02-08 | qwen3 memory
