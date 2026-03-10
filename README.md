@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-03-10 | chat template.
 | 2026-03-08 | vllm tool calling.
 | 2026-02-23 | wandb. common curves
 | 2026-02-19 | trials with bf16 precision, mixed precision training
