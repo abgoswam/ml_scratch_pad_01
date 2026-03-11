@@ -2,7 +2,7 @@
 
 ## Problem
 
-omniagent-v1 always produces `<think>` blocks in its output. This behavior is baked into the model weights via SFT — the model emits `<think>` regardless of what system prompt is provided. There is currently no way to suppress thinking at inference time.
+omniagent-v1 always produces `<think>` blocks in its output. This behavior is baked into the model weights via SFT. for SWE-bench, it always outputs very long `<think>` blocks, leading to context limit exceeded errors.
 
 Qwen3-14B (a comparable thinking model) solves this with an `enable_thinking` parameter in its chat template, giving callers control over whether the model thinks or not.
 
