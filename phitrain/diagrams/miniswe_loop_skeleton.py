@@ -1,9 +1,10 @@
 # instance = {
-#     "instance_id": "django__django-16379",
+#     "instance_id": "django__django-15629",
 #     "repo": "django/django",
-#     "base_commit": "a1b2c3d",
-#     "problem_statement": "FileBasedCache crashes on empty cache directory...",
-#     "test_patch": "diff --git a/tests/cache/tests.py ...",
+#     "base_commit": "694cf458f16b8d340a3195244196980b2dec34fd",
+#     "problem_statement": "Errors with db_collation – no propagation to foreignkeys. "
+#         "Using db_collation with a pk that also has referenced fks in other models "
+#         "causes foreign key constraint errors in MySQL...",
 # }
 
 def swe_multi_turn_train_loop(instance, system_prompt, max_turns):
