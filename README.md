@@ -5,6 +5,7 @@ scratch projects for fun
 
 | Date       | Comment                  
 |------------|--------------------------
+| 2026-04-13 | vllm harbor swe
 | 2026-03-22 | tool_call.
 | 2026-03-11 | SWE skeleton.
 | 2026-03-10 | chat template.
